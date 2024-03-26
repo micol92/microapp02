@@ -1,0 +1,14 @@
+{
+  "welcomeFile": "microapp02",
+  "authenticationMethod": "route",
+  "sessionTimeout": 30,
+  "routes": [
+    {
+      "source": "^/odata/(.*)$",
+      "target": "/odata/$1",
+      "destination": "core_api_token_exchg",
+      "csrfProtection": true,
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
