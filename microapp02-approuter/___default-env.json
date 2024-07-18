@@ -1,0 +1,8 @@
+{
+    "destinations": [
+      {
+        "name": "core_api_token_exchg",
+        "url": "https://btp-kr-pockr-dev-microcap02-srv.cfapps.ap12.hana.ondemand.com"
+      }
+    ]
+  }

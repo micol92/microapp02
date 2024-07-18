@@ -17,6 +17,10 @@ modules:
       - microapp02.zip
       name: microapp02
       target-path: resources/
+    - artifacts:
+      - webapp2.zip
+      name: webapp2
+      target-path: resources/
 - name: microapp02
   type: html5
   path: .
@@ -37,7 +41,16 @@ modules:
   parameters:
     disk-quota: 256M
     memory: 256M
-
+- name: webapp2
+  type: html5
+  path: webapp2
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
 resources:
 - name: microapp02-repo-host
   type: org.cloudfoundry.managed-service
